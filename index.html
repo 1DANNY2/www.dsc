@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Danny Shoe Collection - clean, modern footwear store.">
+  <title>Danny Shoe Collection</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="#home">DANNY <span>SHOE COLLECTION</span></a>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#shop">Shop</a><a href="#bookings">Bookings</a>
+    <a href="#ask">Ask Us</a><a href="#about">About Us</a><a href="#contact">Contact</a>
+    <a href="#settings">Settings</a>
+  </nav>
+  <button class="cart-btn" onclick="openCart()">🛒 <span id="cartCount">0</span></button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">DANNY SHOE COLLECTION</p>
+    <h1>Step Into Your Style.</h1>
+    <p>Clean. Comfortable. Confident. Discover footwear for every occasion.</p>
+    <a class="btn" href="#shop">Shop Now</a>
+  </div>
+  <div class="hero-image">
+    <img src="images/hero-shoe.jpg" alt="Featured shoe" onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80'">
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="section-head"><p class="eyebrow">EXPLORE</p><h2>Shop by category</h2></div>
+  <div class="category-grid">
+    <button onclick="filterProducts('Sneakers')">Sneakers</button>
+    <button onclick="filterProducts('Running')">Running</button>
+    <button onclick="filterProducts('Sports')">Sports</button>
+    <button onclick="filterProducts('Formal')">Formal</button>
+    <button onclick="filterProducts('Sandals')">Sandals</button>
+    <button onclick="filterProducts('All')">View All</button>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="section-head">
+    <p class="eyebrow">SHOP</p><h2>Featured footwear</h2>
+    <div class="shop-tools">
+      <input id="search" type="search" placeholder="Search shoes..." oninput="renderProducts()">
+      <select id="sort" onchange="renderProducts()"><option value="featured">Sort: Featured</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option></select>
+    </div>
+  </div>
+  <div id="products" class="product-grid"></div>
+</section>
+
+<section class="offer">
+  <div><p class="eyebrow">SPECIAL OFFER</p><h2>Step into a better deal.</h2><p>Selected styles available at special prices.</p></div>
+  <a class="btn" href="#shop">Shop Deals</a>
+</section>
+
+<section class="section finder">
+  <div class="section-head"><p class="eyebrow">FIND YOUR SHOE</p><h2>Choose what fits you</h2></div>
+  <div class="finder-grid">
+    <select id="findType"><option>All</option><option>Sneakers</option><option>Running</option><option>Sports</option><option>Formal</option><option>Sandals</option></select>
+    <select id="findSize"><option>Any size</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option></select>
+    <select id="findBudget"><option value="999999">Any budget</option><option value="1000">Up to K1,000</option><option value="2000">Up to K2,000</option><option value="3000">Up to K3,000</option></select>
+    <button class="btn" onclick="findShoe()">Find Shoes</button>
+  </div>
+</section>
+
+<section class="section two-col" id="bookings">
+  <div><p class="eyebrow">BOOKINGS</p><h2>Book a visit</h2><p>Request a convenient time to visit or discuss your footwear needs.</p></div>
+  <form onsubmit="submitForm(event,'Booking received! We will contact you to confirm.')">
+    <input required placeholder="Full name"><input required type="tel" placeholder="Phone number">
+    <input required type="date"><input required type="time">
+    <textarea placeholder="What would you like to discuss?"></textarea><button class="btn">Request Booking</button>
+  </form>
+</section>
+
+<section class="section two-col" id="ask">
+  <div><p class="eyebrow">ASK US</p><h2>Have a question?</h2><p>Send us a message about products, sizes, delivery, bookings or anything else.</p></div>
+  <form onsubmit="submitForm(event,'Message sent! Thank you for contacting us.')">
+    <input required placeholder="Your name"><input required type="email" placeholder="Email address">
+    <textarea required placeholder="Your question"></textarea><button class="btn">Send Question</button>
+  </form>
+</section>
+
+<section class="section about" id="about">
+  <p class="eyebrow">ABOUT US</p><h2>Quality footwear. Better style.</h2>
+  <p>Danny Shoe Collection is a modern footwear store focused on helping customers find comfortable, stylish shoes for everyday life, work, sport and special occasions.</p>
+</section>
+
+<section class="section two-col" id="contact">
+  <div><p class="eyebrow">CONTACT</p><h2>Let's talk.</h2><p>Phone: <a href="tel:+260977388313">0977388313</a><br>Email: <a href="mailto:drlldanny@gmail.com">drlldanny@gmail.com</a><br>WhatsApp: <a href="https://wa.me/260977388313" target="_blank" rel="noopener">0977388313</a><br>Facebook: <a href="https://www.facebook.com/AngelDannyLiche" target="_blank" rel="noopener">AngelDanny Liche</a><br>FAX: +260 XXX XXX XXX</p></div>
+  <div><p><strong>Business hours</strong><br>Mon–Sat: 08:00–18:00</p><p>Location: Zambia</p></div>
+</section>
+
+<section class="section contact-links">
+  <div class="section-head"><p class="eyebrow">CONNECT</p><h2>Reach Danny Shoe Collection</h2></div>
+  <div class="quick-links">
+    <a class="btn" href="https://wa.me/260977388313" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn" href="mailto:drlldanny@gmail.com">Email Us</a>
+    <a class="btn" href="https://www.facebook.com/AngelDannyLiche" target="_blank" rel="noopener">Facebook</a>
+    <a class="btn" href="tel:+260977388313">Call 0977388313</a>
+  </div>
+</section>
+
+<section class="section settings" id="settings">
+  <p class="eyebrow">SETTINGS</p><h2>Store preferences</h2>
+  <label><input type="checkbox" checked> Receive order notifications</label>
+  <label><input type="checkbox" checked> Receive special offers</label>
+  <p>Currency: <strong>Zambian Kwacha (ZMW / K)</strong></p>
+</section>
+</main>
+
+<footer><strong>DANNY SHOE COLLECTION</strong><span>© 2026. All rights reserved.</span></footer>
+
+<div id="cartModal" class="modal" aria-hidden="true">
+  <div class="modal-card"><button class="close" onclick="closeCart()">×</button><h2>Your Cart</h2><div id="cartItems"></div><div class="cart-total">Total: <strong id="cartTotal">K0</strong></div><button class="btn full" onclick="checkout()">Proceed to Checkout</button></div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
