@@ -73,88 +73,237 @@ button:hover {
     transform: translateX(-50%);
   }
 }
-/* RED THEME */
-body {
-  background: #ffffff;
-  color: #222222;
+ /* DANNY SHOE COLLECTION
+    PREMIUM RED + BLACK + WHITE THEME
+ */
+
+:root {
+  --black: #0a0a0a;
+  --red: #c40000;
+  --bright-red: #e00000;
+  --white: #ffffff;
+  --light: #f7f7f7;
+  --border: #dddddd;
+  --text: #151515;
 }
 
+/* Main page */
+body {
+  background: var(--white);
+  color: var(--text);
+}
+
+/* Header */
 .site-header {
-  background: #7F1D1D;
-  border-bottom: 1px solid #DC2626;
+  background: var(--black);
+  border-bottom: 2px solid var(--red);
 }
 
 .logo {
-  color: #ffffff;
+  color: var(--white);
 }
 
 .logo span {
-  color: #FEE2E2;
+  color: #bbbbbb;
 }
 
 .site-header nav a {
-  color: #ffffff;
+  color: var(--white);
 }
 
-.hero {
-  background: #FEF2F2;
+.site-header nav a:hover {
+  color: var(--red);
 }
 
-.eyebrow {
-  color: #DC2626;
-}
-
-.section-head h2 {
-  color: #7F1D1D;
-}
-
-.category-grid button {
-  border-color: #FECACA;
-}
-
-.category-grid button:hover {
-  background: #DC2626;
-  color: #ffffff;
-}
-
-.product {
-  border-color: #FECACA;
-}
-
-.price {
-  color: #DC2626;
-}
-
-.btn,
-.small-btn.dark {
-  background: #DC2626;
-  color: #ffffff;
-}
-
-.btn:hover,
-.small-btn.dark:hover {
-  background: #7F1D1D;
-}
-
-.offer {
-  background: #FEE2E2;
-}
-
-.contact-links {
-  border-top-color: #FECACA;
-}
-
-footer {
-  border-top-color: #FECACA;
-}
-
+/* Buttons */
 .cart-btn,
 .menu-btn {
-  border-color: #DC2626;
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid #555;
 }
 
 .cart-btn:hover,
 .menu-btn:hover {
-  background: #DC2626;
-  color: #ffffff;
+  background: var(--red);
+  border-color: var(--red);
+}
+
+/* Hero */
+.hero {
+  background: var(--light);
+}
+
+.hero h1 {
+  color: var(--black);
+}
+
+.eyebrow {
+  color: var(--red);
+}
+
+/* Section headings */
+.section-head h2 {
+  color: var(--black);
+}
+
+.section-head p {
+  color: #666;
+}
+
+/* Categories */
+.category-grid button {
+  background: var(--white);
+  color: var(--black);
+  border: 1px solid var(--border);
+}
+
+.category-grid button:hover {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+/* Products */
+.product {
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+.product:hover {
+  border-color: var(--red);
+}
+
+.price {
+  color: var(--red);
+}
+
+.old {
+  color: #999;
+}
+
+/* Product buttons */
+.small-btn {
+  background: var(--white);
+  color: var(--black);
+  border: 1px solid #ccc;
+}
+
+.small-btn:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.small-btn.dark,
+.btn {
+  background: var(--black);
+  color: var(--white);
+}
+
+.small-btn.dark:hover,
+.btn:hover {
+  background: var(--red);
+  color: var(--white);
+}
+
+/* Special offer */
+.offer {
+  background: var(--black);
+  color: var(--white);
+}
+
+.offer h2,
+.offer h3 {
+  color: var(--white);
+}
+
+.offer .btn {
+  background: var(--red);
+  color: var(--white);
+}
+
+.offer .btn:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* Finder */
+.finder {
+  background: var(--white);
+}
+
+.shop-tools input,
+.shop-tools select,
+.finder-grid select,
+form input,
+form textarea {
+  border-color: #ccc;
+}
+
+.shop-tools input:focus,
+.shop-tools select:focus,
+.finder-grid select:focus,
+form input:focus,
+form textarea:focus {
+  outline: 2px solid var(--red);
+}
+
+/* About */
+.about {
+  background: var(--light);
+}
+
+/* Contact */
+.contact-links {
+  border-top: 1px solid var(--border);
+}
+
+.contact-links a:hover {
+  color: var(--red);
+}
+
+/* Footer */
+footer {
+  background: var(--black);
+  color: #bbbbbb;
+  border-top: 2px solid var(--red);
+}
+
+footer a {
+  color: var(--white);
+}
+
+footer a:hover {
+  color: var(--red);
+}
+
+/* Modal */
+.modal {
+  background: rgba(0, 0, 0, .75);
+}
+
+.modal-card {
+  background: var(--white);
+}
+
+.close:hover {
+  color: var(--red);
+}
+
+/* Cart */
+.cart-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-total {
+  color: var(--black);
+}
+
+/* Slider */
+.slide-track img {
+  border: 2px solid transparent;
+}
+
+.slide-track img:hover {
+  border-color: var(--red);
 }
