@@ -73,45 +73,4 @@ button:hover {
     transform: translateX(-50%);
   }
 }
-:root {
-  --primary: #DC2626;
-  --secondary: #EF4444;
-  --dark-red: #7F1D1D;
-  --light-red: #FEE2E2;
-  --background: #FFFFFF;
-  --text: #222222;
-}
 
-body {
-  background-color: var(--background);
-  color: var(--text);
-}
-
-header {
-  background-color: var(--dark-red);
-}
-
-button {
-  background-color: var(--primary);
-  color: white;
-}
-
-button:hover {
-  background-color: var(--secondary);
-}
-
-.price {
-  color: var(--primary);
-}
-
-.section-head h2 {
-  color: var(--dark-red);
-}
-
-.card {
-  border: 2px solid var(--light-red);
-}
-
-.card:hover {
-  border-color: var(--secondary);
-}
