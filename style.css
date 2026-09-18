@@ -73,4 +73,88 @@ button:hover {
     transform: translateX(-50%);
   }
 }
+/* RED THEME */
+body {
+  background: #ffffff;
+  color: #222222;
+}
 
+.site-header {
+  background: #7F1D1D;
+  border-bottom: 1px solid #DC2626;
+}
+
+.logo {
+  color: #ffffff;
+}
+
+.logo span {
+  color: #FEE2E2;
+}
+
+.site-header nav a {
+  color: #ffffff;
+}
+
+.hero {
+  background: #FEF2F2;
+}
+
+.eyebrow {
+  color: #DC2626;
+}
+
+.section-head h2 {
+  color: #7F1D1D;
+}
+
+.category-grid button {
+  border-color: #FECACA;
+}
+
+.category-grid button:hover {
+  background: #DC2626;
+  color: #ffffff;
+}
+
+.product {
+  border-color: #FECACA;
+}
+
+.price {
+  color: #DC2626;
+}
+
+.btn,
+.small-btn.dark {
+  background: #DC2626;
+  color: #ffffff;
+}
+
+.btn:hover,
+.small-btn.dark:hover {
+  background: #7F1D1D;
+}
+
+.offer {
+  background: #FEE2E2;
+}
+
+.contact-links {
+  border-top-color: #FECACA;
+}
+
+footer {
+  border-top-color: #FECACA;
+}
+
+.cart-btn,
+.menu-btn {
+  border-color: #DC2626;
+}
+
+.cart-btn:hover,
+.menu-btn:hover {
+  background: #DC2626;
+  color: #ffffff;
+}
